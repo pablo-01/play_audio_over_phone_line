@@ -34,7 +34,7 @@ class Modem:
             self.analog_modem.flushInput()
             self.analog_modem.flushOutput()
 
-            commands = ["AT", "ATZ3", "ATV1", "ATE1", "AT+VCID=1"]
+            commands = ["AT", "ATZ", "ATV1", "ATE1", "AT+VCID=1"]
             for cmd in commands:
                 if not self.exec_AT_cmd(cmd):
                     print(f"Error: Command {cmd} failed")
